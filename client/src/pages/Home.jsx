@@ -40,7 +40,7 @@ const Home = () => {
               With AI
             </span>
           </h1>
-          <h2 className="text-xs text-white md:text-base lg:text-xl">
+          <h2 className="text-xs text-white md:max-w-md md:text-base lg:text-xl">
             Explore and create a compilation of imaginative and visually
             striking visuals produced by DALL-E AI
           </h2>
