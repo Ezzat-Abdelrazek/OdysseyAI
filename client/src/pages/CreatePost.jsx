@@ -21,15 +21,18 @@ const CreatePost = () => {
     try {
       setIsImgGenerating(true);
       setIsImgLoading(true);
-      const response = await fetch("http://localhost:8080/api/v1/image", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          prompt: userPrompt,
-        }),
-      });
+      const response = await fetch(
+        "https://odyssayai.onrender.com/api/v1/image",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            prompt: userPrompt,
+          }),
+        }
+      );
       const { data } = await response.json();
       const imgUrl = data.url;
       setUserGeneratedImgUrl(imgUrl);
@@ -68,7 +71,7 @@ const CreatePost = () => {
 
       setIsSharingPost(true);
 
-      await fetch("http://localhost:8080/api/v1/post", {
+      await fetch("https://odyssayai.onrender.com/api/v1/post", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

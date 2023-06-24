@@ -10,7 +10,9 @@ const Home = () => {
 
   useEffect(() => {
     const fetchAllPosts = async () => {
-      const response = await fetch("http://localhost:8080/api/v1/post");
+      const response = await fetch(
+        "https://odyssayai.onrender.com/api/v1/post"
+      );
       const data = await response.json();
       const posts = data.data.posts;
 
